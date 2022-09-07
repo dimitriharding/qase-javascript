@@ -543,6 +543,7 @@ export class QaseCoreReporter {
         } catch (err) {
             QaseCoreReporter.logger(`Error on completing run ${err as string}`);
         }
+        QaseCoreReporter.logger(chalk`{blue https://app.qase.io/run/${this.options.projectCode}/dashboard/${this.runId}}`);
     }
 
     public addTestResult(test: TestResult, status: ResultCreateStatusEnum, attachment?: any[]): void {
